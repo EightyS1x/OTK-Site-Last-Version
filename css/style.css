@@ -50,3 +50,55 @@ body, html {
   0% { background-position: center bottom; }
   100% { background-position: center top; }
 }
+
+.hero1 { background-image: url('../images/bg1.png'); background-attachment: fixed; }
+.hero2 { background-image: url('../images/bg2.png'); background-attachment: fixed; }
+.hero3 { background-image: url('../images/bg3.png'); background-attachment: fixed; }
+.hero4 {
+  background: linear-gradient(to bottom, #000000ee, #111111dd), url('../images/bg1.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.socials {
+  background-color: #0c0c0c;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.social-buttons a {
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: #ff2f92;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.social-buttons a:hover {
+  background: #ff64a6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  margin-top: 1rem;
+  background-color: #ff2f92;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff64a6;
+}
