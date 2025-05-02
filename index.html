@@ -4,10 +4,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>OtakuPower ($OTK)</title>
+
+  <!-- ваш основной CSS -->
   <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- анимация облаков и волос -->
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .slide {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .slide img.base,
+    .slide img.clouds,
+    .slide img.hair {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+    .slide img.base  { z-index: 1; }
+    .slide img.clouds{ z-index: 2; }
+    .slide img.hair  { z-index: 3; transform-origin: top center; }
+
+    /* облака едут слева направо */
+    .clouds {
+      animation: moveClouds 60s linear infinite;
+    }
+    @keyframes moveClouds {
+      0%   { transform: translateX(-20%); }
+      100% { transform: translateX(120%); }
+    }
+
+    /* лёгкое покачивание волос */
+    .hair {
+      animation: swingHair 4s ease-in-out infinite alternate;
+    }
+    @keyframes swingHair {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(2deg); }
+    }
+
+    /* ваш старый .content внутри слайда */
+    .slide .content {
+      position: relative;
+      z-index: 10;
+      padding: 2rem;
+      color: #fff; /* поменяйте под свой дизайн */
+      /* и всё остальное из вашего style.css */
+    }
+  </style>
 </head>
+
 <body>
-  <section class="hero hero1">
+  <!-- СЛАЙД 1: Welcome -->
+  <section class="slide" id="slide1">
+    <img class="base"   src="images/bg1.png"     alt="Айке на лужайке"/>
+    <img class="clouds" src="images/clouds1.png" alt="облака"/>
+    <img class="hair"   src="images/hair1.png"   alt="волосы Айке"/>
     <div class="content">
       <h1>Welcome to OtakuPower ($OTK)</h1>
       <p>Anime spirit meets crypto energy.</p>
@@ -20,7 +81,11 @@
     </div>
   </section>
 
-  <section class="hero hero2">
+  <!-- СЛАЙД 2: What is $OTK? -->
+  <section class="slide" id="slide2">
+    <img class="base"   src="images/bg2.png"     alt="Айке в аналитическом центре"/>
+    <img class="clouds" src="images/clouds2.png" alt="облака"/>
+    <img class="hair"   src="images/hair2.png"   alt="волосы Айке"/>
     <div class="content">
       <h2>What is $OTK?</h2>
       <p>$OTK is an anime meme-token born from nothing but ambition, dreams, and love for anime and crypto.</p>
@@ -33,7 +98,11 @@
     </div>
   </section>
 
-  <section class="hero hero3">
+  <!-- СЛАЙД 3: Roadmap -->
+  <section class="slide" id="slide3">
+    <img class="base"   src="images/bg3.png"     alt="Айке рисует в студии"/>
+    <img class="clouds" src="images/clouds3.png" alt="облака"/>
+    <img class="hair"   src="images/hair3.png"   alt="волосы Айке"/>
     <div class="content">
       <h2>Roadmap</h2>
       <ul>
@@ -46,8 +115,7 @@
     </div>
   </section>
 
-  <script src="js/addwallet.js"></script>
-
+  <!-- Секция с airdrop (как у вас была hero4) -->
   <section class="hero hero4">
     <div class="content">
       <h2>Claim Free $OTK Airdrop</h2>
@@ -56,6 +124,7 @@
     </div>
   </section>
 
+  <!-- Социальные ссылки -->
   <section class="socials">
     <div class="content">
       <h2>Join the $OTK Community</h2>
@@ -68,5 +137,6 @@
     </div>
   </section>
 
+  <script src="js/addwallet.js"></script>
 </body>
 </html>
