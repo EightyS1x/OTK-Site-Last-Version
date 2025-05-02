@@ -1,120 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OtakuPower ($OTK)</title>
-  <link rel="stylesheet" href="css/style.css"/>
-
-  <!-- Анимация облаков и волос -->
-  <style>
-    /* базовая обёртка для анимации — только для слайдов */
-    .slide {
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* фоновые слои для .slide */
-    .slide img.base,
-    .slide img.clouds,
-    .slide img.hair {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      pointer-events: none;
-    }
-    .slide img.base   { z-index: 1; }
-    .slide img.clouds { z-index: 2; animation: moveClouds 60s linear infinite; }
-    .slide img.hair   { z-index: 3; transform-origin: top center; animation: swingHair 4s ease-in-out infinite alternate; }
-
-    /* анимации */
-    @keyframes moveClouds {
-      0%   { transform: translateX(-20%); }
-      100% { transform: translateX(120%); }
-    }
-    @keyframes swingHair {
-      0%   { transform: rotate(0deg); }
-      100% { transform: rotate(2deg); }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- СЛАЙД 1: Welcome -->
-  <section class="slide hero hero1">
-    <img class="base"   src="images/bg1.png"     alt="Айке на лужайке">
-    <img class="clouds" src="images/clouds1.png" alt="облака">
-    <img class="hair"   src="images/hair1.png"   alt="волосы Айке">
-    <div class="content">
-      <h1>Welcome to OtakuPower ($OTK)</h1>
-      <p>Anime spirit meets crypto energy.</p>
-      <div class="buttons">
-        <a href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0xA6AF26dFA082272fBbbcEAA57d145d10F51F7431">Buy $OTK</a>
-        <a href="#" id="addWallet">Add to Wallet</a>
-        <a href="https://pancakeswap.finance/add/BNB/0xA6AF26dFA082272fBbbcEAA57d145d10F51F7431">Add Liquidity</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OtakuPower ($OTK)</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="hero hero1">
+      <div class="content">
+        <h1>Welcome to OtakuPower ($OTK)</h1>
+        <p>Anime spirit meets crypto energy.</p>
+        <div class="buttons">
+          <a href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0xA6AF26dFA082272fBbbcEAA57d145d10F51F7431">Buy $OTK</a>
+          <a href="#" id="addWallet">Add to Wallet</a>
+          <a href="https://pancakeswap.finance/add/BNB/0xA6AF26dFA082272fBbbcEAA57d145d10F51F7431">Add Liquidity</a>
+        </div>
+        <p class="tagline">
+          Created from scratch. Built with love. Powered by the community.
+        </p>
       </div>
-      <p class="tagline">Created from scratch. Built with love. Powered by the community.</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- СЛАЙД 2: What is $OTK? -->
-  <section class="slide hero hero2">
-    <img class="base"   src="images/bg2.png"     alt="Айке в аналитическом центре">
-    <img class="clouds" src="images/clouds2.png" alt="облака">
-    <img class="hair"   src="images/hair2.png"   alt="волосы Айке">
-    <div class="content">
-      <h2>What is $OTK?</h2>
-      <p>$OTK is an anime meme-token born from nothing but ambition, dreams, and love for anime and crypto.</p>
-      <ul>
-        <li>No presale</li>
-        <li>No dev tax</li>
-        <li>No VC games</li>
-        <li>Liquidity locked</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- СЛАЙД 3: Roadmap -->
-  <section class="slide hero hero3">
-    <img class="base"   src="images/bg3.png"     alt="Айке рисует в студии">
-    <img class="clouds" src="images/clouds3.png" alt="облака">
-    <img class="hair"   src="images/hair3.png"   alt="волосы Айке">
-    <div class="content">
-      <h2>Roadmap</h2>
-      <ul>
-        <li>Organic community growth</li>
-        <li>Airdrops & staking</li>
-        <li>Liquidity boosts</li>
-        <li>Marketing campaigns</li>
-        <li>Community votes & utility</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Секция с airdrop -->
-  <section class="hero hero4">
-    <div class="content">
-      <h2>Claim Free $OTK Airdrop</h2>
-      <p>Join the movement! Fill out the form and become part of the OtakuPower community.</p>
-      <a class="btn" href="#" target="_blank">Join Airdrop</a>
-    </div>
-  </section>
-
-  <!-- Социальные ссылки -->
-  <section class="socials">
-    <div class="content">
-      <h2>Join the $OTK Community</h2>
-      <div class="social-buttons">
-        <a href="https://t.me/otakupowertoken" target="_blank">Telegram</a>
-        <a href="https://x.com/i/communities/1917691643362251223" target="_blank">X</a>
-        <a href="https://dexscreener.com/bsc/0xa6af26dfa082272fbbbceaa57d145d10f51f7431" target="_blank">DexScreener</a>
-        <a href="https://coinsniper.net/coin/80937" target="_blank">CoinSniper</a>
+    <section class="hero hero2">
+      <div class="content">
+        <h2>What is $OTK?</h2>
+        <p>
+          $OTK is an anime meme-token born from nothing but ambition,
+          dreams, and love for anime and crypto.
+        </p>
+        <ul>
+          <li>No presale</li>
+          <li>No dev tax</li>
+          <li>No VC games</li>
+          <li>Liquidity locked</li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <script src="js/addwallet.js"></script>
-</body>
+    <section class="hero hero3">
+      <div class="content">
+        <h2>Roadmap</h2>
+        <ul>
+          <li>Organic community growth</li>
+          <li>Airdrops & staking</li>
+          <li>Liquidity boosts</li>
+          <li>Marketing campaigns</li>
+          <li>Community votes & utility</li>
+        </ul>
+      </div>
+    </section>
+
+    <script src="js/addwallet.js"></script>
+
+    <section class="hero hero4">
+      <div class="content">
+        <h2>Claim Free $OTK Airdrop</h2>
+        <p>
+          Join the movement! Fill out the form and become part of the
+          OtakuPower community.
+        </p>
+        <a class="btn" href="#" target="_blank">Join Airdrop</a>
+      </div>
+    </section>
+
+    <section class="socials">
+      <div class="content">
+        <h2>Join the $OTK Community</h2>
+        <div class="social-buttons">
+          <a href="https://t.me/otakupowertoken" target="_blank">Telegram</a>
+          <a href="https://x.com/i/communities/1917691643362251223" target="_blank">X</a>
+          <a
+            href="https://dexscreener.com/bsc/0xa6af26dfa082272fbbbceaa57d145d10f51f7431"
+            target="_blank"
+            >DexScreener</a
+          >
+          <a href="https://coinsniper.net/coin/80937" target="_blank"
+            >CoinSniper</a
+          >
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
